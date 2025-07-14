@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Text3D, Center, Float } from '@react-three/drei';
+import { OrbitControls, Center, Float } from '@react-three/drei';
 import { useRef, Suspense } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { Button } from '@/components/ui/button';
@@ -38,41 +38,40 @@ function Laptop() {
         <meshBasicMaterial color="#6366f1" opacity={0.8} transparent />
       </mesh>
       
-      {/* Floating Code Elements */}
+      {/* Floating Tech Elements */}
       <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-        <Text3D
-          font="/fonts/helvetiker_regular.typeface.json"
-          size={0.1}
-          height={0.02}
-          position={[1.5, 1.2, 0]}
-        >
-          React
+        <mesh position={[1.5, 1.2, 0]}>
+          <boxGeometry args={[0.3, 0.3, 0.1]} />
           <meshStandardMaterial color="#61dafb" />
-        </Text3D>
+        </mesh>
       </Float>
       
       <Float speed={1.5} rotationIntensity={0.3} floatIntensity={0.7}>
-        <Text3D
-          font="/fonts/helvetiker_regular.typeface.json"
-          size={0.1}
-          height={0.02}
-          position={[-1.5, 1.5, 0.5]}
-        >
-          Next.js
+        <mesh position={[-1.5, 1.5, 0.5]}>
+          <sphereGeometry args={[0.15]} />
           <meshStandardMaterial color="#ffffff" />
-        </Text3D>
+        </mesh>
       </Float>
       
       <Float speed={2.5} rotationIntensity={0.4} floatIntensity={0.6}>
-        <Text3D
-          font="/fonts/helvetiker_regular.typeface.json"
-          size={0.1}
-          height={0.02}
-          position={[0, 2, 1]}
-        >
-          TypeScript
+        <mesh position={[0, 2, 1]}>
+          <octahedronGeometry args={[0.2]} />
           <meshStandardMaterial color="#3178c6" />
-        </Text3D>
+        </mesh>
+      </Float>
+      
+      <Float speed={1.8} rotationIntensity={0.6} floatIntensity={0.4}>
+        <mesh position={[2, 0.8, -0.5]}>
+          <tetrahedronGeometry args={[0.15]} />
+          <meshStandardMaterial color="#06b6d4" />
+        </mesh>
+      </Float>
+      
+      <Float speed={2.2} rotationIntensity={0.3} floatIntensity={0.8}>
+        <mesh position={[-2, 0.5, 0.8]}>
+          <dodecahedronGeometry args={[0.12]} />
+          <meshStandardMaterial color="#10b981" />
+        </mesh>
       </Float>
     </group>
   );
