@@ -23,13 +23,13 @@ function Laptop() {
       {/* Laptop Base */}
       <mesh position={[0, -0.5, 0]}>
         <boxGeometry args={[3, 0.2, 2]} />
-        <meshStandardMaterial color="#1a1a1a" />
+        <meshStandardMaterial color="#e0e7ff" metalness={0.3} roughness={0.4} />
       </mesh>
       
       {/* Laptop Screen */}
       <mesh position={[0, 0.5, -0.9]} rotation={[-0.2, 0, 0]}>
         <boxGeometry args={[2.8, 1.8, 0.1]} />
-        <meshStandardMaterial color="#0a0a0a" />
+        <meshStandardMaterial color="#374151" metalness={0.8} roughness={0.2} />
       </mesh>
       
       {/* Screen Glow */}
