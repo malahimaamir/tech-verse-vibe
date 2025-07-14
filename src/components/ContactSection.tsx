@@ -358,9 +358,14 @@ export default function ContactSection() {
                 <Mail className="mr-2 h-5 w-5" />
                 Start a Project
               </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary hover:text-white"
+                onClick={() => window.open('/Malahima_Amir_CV.pdf', '_blank')}
+              >
                 <ExternalLink className="mr-2 h-5 w-5" />
-                View Portfolio
+                Download CV
               </Button>
             </div>
           </div>

@@ -95,10 +95,10 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(250 100% 70% / 0.3)'
+						boxShadow: '0 0 20px hsl(210 100% 56% / 0.3)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px hsl(250 100% 70% / 0.6)'
+						boxShadow: '0 0 40px hsl(210 100% 56% / 0.6)'
 					}
 				},
 				'fadeInUp': {
